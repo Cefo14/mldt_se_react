@@ -9,8 +9,10 @@ import PATHS from './paths';
 const SelectSaveData = lazy(() => import('../containers/SelectSaveData'));
 const EditSaveData = lazy(() => import('../containers/EditSaveData'));
 
+const { REACT_APP_BASE_NAME = '/' } = process.env;
+
 const Routes = () => (
-  <Router basename="/mldt_se_react">
+  <Router basename={REACT_APP_BASE_NAME}>
     <Suspense fallback={<div>Loading... </div>}>
       <ContainerBG>
         <SaveDataProvider>
