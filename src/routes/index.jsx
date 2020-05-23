@@ -10,7 +10,7 @@ const SelectSaveData = lazy(() => import('../containers/SelectSaveData'));
 const EditSaveData = lazy(() => import('../containers/EditSaveData'));
 
 const Routes = () => (
-  <Router>
+  <Router basename="/mldt_se_react">
     <Suspense fallback={<div>Loading... </div>}>
       <ContainerBG>
         <SaveDataProvider>
